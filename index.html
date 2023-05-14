@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate MCQ</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="logo">
+      <div class="logo-img"></div>
+   </div>
+	<div class="container">
+
+		<div class="left">
+         <label for="topic-select">Select a Topic:</label>
+         <select id="topic-select">
+            <option value="Science">Science</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Geography">Geography</option>
+            <option value="History">History</option>
+
+            <option value="TriColor">HOTS</option>
+            <option value="Coding">Coding</option>
+            <option value="General Knowledge">General Knowledge</option>
+            <option value="Books">Books</option>
+            <option value="Film">Film</option>
+            <option value="Music">Music</option>
+            <option value="Musicals">Musicals</option>
+            <option value="Theatres">Theatres</option>
+            <option value="Television">Television</option>
+            <option value="Video Games">Video Games</option>
+            <option value="Board Games">Board Games</option>
+
+            <option value="Nature">Nature</option>
+            <option value="Computers">Computers</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Mythology">Mythology</option>
+            <option value="Sports">Sports</option>
+            <option value="Politics">Politics</option>
+            <option value="Art">Art</option>
+            <option value="Celebrities">Celebrities</option>
+            <option value="Animals">Animals</option>
+            <option value="Vehicles">Vehicles</option>
+            <option value="Comics">Comics</option>
+            <option value="Gadgets">Gadgets</option>
+            <option value="Japanese Anime">Japanese Anime &amp; Manga</option>
+            <option value="Cartoon">Cartoon &amp; Animations</option>
+
+         </select>
+
+         <label class="file-upload-text"></i> or</label>
+            <div class="file-upload">
+               <label class="file-upload-text" for="file-input"><i class="fas fa-upload"></i> Upload File</label>
+               <input type="file" id="file-input">
+             </div>
+
+             <label for="topic-select">Choose Assessment Type:</label>
+         <select id="topic-select">
+            <option value="MCQ">MCQ</option>
+
+         </select>
+         <label for="difficulty-select">Select difficulty:</label>
+         <select id="difficulty-select">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+         </select>
+
+         <label for="number-input">Number of questions:</label>
+         <input type="number" id="number-input" value="1" min="1" max="2">
+         <button onclick="generateMCQ()">
+            <span>Generate Question</span>
+            <span class="spinner"></span>
+          </button>
+		</div>
+		<div class="right">
+         <div class="question2-container">
+         <div class="question1">
+			<h3 id="question"></h3>
+			<ul id="options">
+				<li><input type="radio" name="option" id="option1"><label for="option1" id="option1-label"></label></li>
+				<li><input type="radio" name="option" id="option2"><label for="option2" id="option2-label"></label></li>
+				<li><input type="radio" name="option" id="option3"><label for="option3" id="option3-label"></label></li>
+				<li><input type="radio" name="option" id="option4"><label for="option4" id="option4-label"></label></li>
+            <label class="answer" id="answer"></label>
+			</ul>
+         </div>
+      </div>
+      <div class="question1-container">
+         <h3 id="question1"></h3>
+			<ul id="options1">
+				<li><input type="radio" name="option" id="option11"><label for="option11" id="option1-label1"></label></li>
+				<li><input type="radio" name="option" id="option22"><label for="option22" id="option2-label2"></label></li>
+				<li><input type="radio" name="option" id="option33"><label for="option33" id="option3-label3"></label></li>
+				<li><input type="radio" name="option" id="option44"><label for="option44" id="option4-label4"></label></li>
+            <label class="answer"  id="answer1"></label>
+			</ul>
+      </div>
+
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
